@@ -11,8 +11,8 @@ import img4 from "../assets/training2.jpg";
 
 const AboutSection = () => {
   return (
-    <div className=" pt-16 px-4 lg:px-0" id="about">
-      <div className="container lg:flex justify-center items-center mx-auto gap-5 lgpt-8">
+    <div className=" pt-16 px-4 lg:px-0 max-w-6xl mx-auto" id="about">
+      <div className="lg:flex justify-center items-center mx-auto gap-5 lg:pt-8">
         <img
           src={summary}
           alt=""
@@ -26,7 +26,7 @@ const AboutSection = () => {
             </p>
           </div>
             
-          <p className="mb-5 text-center font-thin text-l lg:text-start lg:w-[600px]">
+          <p className="mb-5 text-center font-thin text-l lg:text-start lg:max-w-[600px]">
             WND Direct Marketing is a dynamic, 100% South African-owned company dedicated to bridging the gap between businesses and their target markets. We combine strategic marketing campaigns, customer acquisition programs, and exceptional service delivery to ensure sustainable growth for our partners. <br/>
 
 We believe in empowering individuals and communities through opportunity, training, and mentorship—because when people grow, businesses thrive.

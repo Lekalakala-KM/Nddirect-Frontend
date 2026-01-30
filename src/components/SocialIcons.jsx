@@ -7,25 +7,25 @@ import { ImWhatsapp } from "react-icons/im";
 
 const SocialIcons = () => {
   return (
-    <div className="gap-5 flex text-xs text-[#f0ede8] justify-center items-center mt-10">
+    <div className="gap-5 flex text-xs text-[#f0ede8] w-fit items-center mt-10">
         {/* <span className="capitalize text-l">follow us on</span> */}
         {/* <span className="line bg-[#f0ede8] w-10 h-[1px]"></span> */}
         <a
-          href="#"
+          href="https://za.linkedin.com/"
           target="_blank"
           className="linkedIn text-2xl hover:text-[#f0ede8] text-[#ef9c33] hover:text-xl transition-all duration-300"
         >
            <FaLinkedinIn />
         </a>
         <a
-          href="https://www.instagram.com/parwendo_/"
+          href="https://www.instagram.com/"
           target="_blank"
           className="instagram text-2xl hover:text-[#f0ede8] text-[#ef9c33] hover:text-xl transition-all duration-300"
         >
           <FaInstagram />
         </a>
         <a
-          href="https://www.facebook.com/profile.php?id=61567669467718"
+          href="https://www.facebook.com/"
           target="_blank"
           className="facebook text-2xl hover:text-[#f0ede8] text-[#ef9c33] hover:text-xl transition-all duration-300"
         >

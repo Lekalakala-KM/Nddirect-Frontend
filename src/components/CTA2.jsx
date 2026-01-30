@@ -7,7 +7,7 @@ const CTA2 = () => {
   return (
     <div className="hero bg-cover bg-center h-[600px] relative bg-[url('/src/assets/team2.jpg')] flex justify-center items-center shadow-lg" id="home">
       <div className="absolute top-0 bottom-0 left-0 right-0 bg-black opacity-50"></div>
-      <div className="container px-8 py-10 flex flex-col items-center md:items-start text-center md:text-start z-10 text-[#f0ede8] lg:w-[1000px]">
+      <div className="container px-8 py-10 flex flex-col items-center md:items-start text-center md:text-start z-10 text-[#f0ede8] lg:w-[1000px]  max-w-6xl mx-auto">
         <div className="sectionHeadings">
           <h3 className="uppercase font-bold mb-8"><GoDash className="inline"/> we are hiring</h3>
           <p className="text-5xl text-[#7f42ce] font-bold uppercase mb-4 leading-[1.1] max-w-[400px]">

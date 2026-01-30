@@ -18,7 +18,7 @@ const Contact = () => {
             </p>
         </div>
 
-        <div className="flex flex-col justify-center items-center lg:flex-row gap-10">
+        <div className="flex flex-col justify-evenly items-center lg:flex-row gap-10 max-w-6xl mx-auto mt-10">
             <div className='order-2 lg:order-none px-4 lg:px-0 text-center lg:text-start'>
                 <div className="sectionHeadings">
                     <h2 className="capitalize text-3xl font-bold mb-2"> points of contact us</h2>
