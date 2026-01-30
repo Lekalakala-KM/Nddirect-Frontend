@@ -6,6 +6,7 @@ import CTA from './components/CTA'
 import Services from './components/Services'
 import CTA2 from './components/CTA2'
 import Contact from './components/Contact'
+import Footer from './components/Footer'
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
       <Services/>
       <CTA2/> 
       <Contact />
+      <Footer />
     </div>
   )
 }
