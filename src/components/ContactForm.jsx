@@ -7,18 +7,13 @@ import "react-toastify/dist/ReactToastify.css";
 const ContactForm = () => {
 
   const [formData, setFormData] = useState({
-    tripClass: "",
-    startDestination: "",
-    endDestination: "",
-    vehicle: "bmw 3 series",
-    pickupDate: "",
-    fullname: "",
+    name: "",
+    surname: "",
     tel: "",
-    tripType: "one-way",
-    pickupTime: "",
     email: "",
-    waitingTime: "",
-    specialInstructions: "",
+    service: "",
+    company: "",
+    details: "",
   });
 
 
@@ -32,15 +27,25 @@ const ContactForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    // Map formData to EmailJS template variables
+    const templateParams = {
+      from_name: `${formData.name} ${formData.surname}`,
+      from_email: formData.email,
+      phone: formData.tel,
+      company: formData.company,
+      service: formData.service,
+      message: formData.details,
+    };
+
     emailjs
-      .send("service_booking", "contact_form", formData, "XaE6KUFQNDhk6zZ_E")
+      .send("service_request", "contact_form", templateParams, "hYGK-RCVVRbKbxbtd")
       .then(
         () => {
-          toast.success("Booking confirmed!");
+          toast.success("Request sent successfully!");
         },
         (err) => {
-          console.log("FAILED...", err);
-          toast.error("Booking failed. Please try again.");
+          console.log("Failed to send request:", err);
+          toast.error("Request failed. Please try again.");
         }
       );
   };
@@ -109,7 +114,7 @@ const ContactForm = () => {
               type="text"
               name="company"
               id="company"
-              value={formData.companyName}
+              value={formData.company}
               onChange={handleChange}
               placeholder="Company Name"
               className="block w-full p-2 mb-2 bg-[#f0ede8] rounded"
@@ -123,6 +128,7 @@ const ContactForm = () => {
               onChange={handleChange}
               className="block w-full p-2 mb-2 bg-[#f0ede8] rounded"
             >
+                <option value="">Select a service</option>
               <option value="Direct Sales Activation">Direct Sales Activation</option>
               <option value="Customer Acquisition">Customer Acquisition</option>
               <option value="Customer Service">Customer Service</option>
