@@ -1,7 +1,7 @@
 import React from "react";
 import img1 from "../assets/promo.jpg";
 import img2 from "../assets/leaders2.jpg";
-import img3 from "../assets/customer.jpeg";
+import img3 from "../assets/customer.png";
 
 const servicesCardsData = [
   {

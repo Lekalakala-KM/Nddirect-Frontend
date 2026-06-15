@@ -10,7 +10,7 @@ import Footer from './components/Footer'
 
 const App = () => {
   return (
-    <div className='bg-[#f0ede8]'>
+    <div>
       <Nav />
       <HeroSection /> 
       <CTA />

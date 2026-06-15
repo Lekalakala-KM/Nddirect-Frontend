@@ -3,3 +3,22 @@
 * {
   scroll-behavior: smooth;
 }
+
+@theme {
+  --animate-infinite-scroll: scroll 25s linear infinite;
+  --animate-fade-in: fadeIn 0.2s ease-out forwards;
+  --animate-scale-up: scaleUp 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+
+  @keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-25% - 1.5rem)); }
+  }
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  @keyframes scaleUp {
+    0% { transform: scale(0.95); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+}

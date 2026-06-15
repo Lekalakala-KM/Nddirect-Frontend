@@ -27,7 +27,7 @@ const AboutSection = () => {
           </div>
             
           <p className="mb-5 text-center font-thin text-l lg:text-start lg:w-[600px]">
-            WND Direct Marketing is a dynamic, 100% South African-owned company dedicated to bridging the gap between businesses and their target markets. We combine strategic marketing campaigns, customer acquisition programs, and exceptional service delivery to ensure sustainable growth for our partners. <br/>
+            ND Direct Marketing is a dynamic, 100% South African-owned company dedicated to bridging the gap between businesses and their target markets. We combine strategic marketing campaigns, customer acquisition programs, and exceptional service delivery to ensure sustainable growth for our partners. <br/>
 
 We believe in empowering individuals and communities through opportunity, training, and mentorship—because when people grow, businesses thrive.
           </p>

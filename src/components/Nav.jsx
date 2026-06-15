@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { RxHamburgerMenu, RxCross1 } from "react-icons/rx";
 import { Link } from "react-router-dom";
-import logo from "../assets/nddirect logo.png";
+import logo from "../assets/nddirect logomark.png";
 
 const Nav = () => {
   const [closeMenu, setCloseMenu] = useState(true);
@@ -77,11 +77,14 @@ const hero = document.querySelector("#home"); // HeroSection must have id="hero"
           text-underline-offset: 4px;
           text-decoration-color: #ef9c33;
         }
+          ${!scrolled ? `.navLink {
+            font-weight: 400;
+          }` : ""}
       `}</style>
 
       <nav
   className={`mainNav fixed top-0 w-full md:h-fit z-20 p-4 transition-colors duration-300 ${
-    scrolled ? "bg-[#211a44] shadow-lg" : "bg-transparent"
+    scrolled || screen.width < 768 ? "bg-[white] shadow-lg" : "bg-transparent"
   } md:flex justify-between`}
   id="nav"
 >
@@ -89,16 +92,16 @@ const hero = document.querySelector("#home"); // HeroSection must have id="hero"
 
         <div className="flex justify-between items-center text-[#f0ede8] text-lg">
           <Link to="/" className="flex gap-2 outline-none  items-center">
-            <img src={logo} alt="ND Direct Marketing Logo" className="h-[25px] block"/>
-            <span className="text-xs leading-none tracking-wide block">ND Direct <br/> Marketing</span></Link>
+            <img src={logo} alt="ND Direct Marketing Logo" className="h-[50px] block"/>
+            <span className="text-sm leading-none tracking-wide block text-[#7f42ce] font-semibold">ND Direct <br/> Marketing</span></Link>
           <div className="md:hidden text-3xl pr-3 cursor-pointer">
             {closeMenu ? (
               <RxHamburgerMenu
                 onClick={handleMenuState}
-                className="text-[#f0ede8]"
+                className="text-[#7f42ce]"
               />
             ) : (
-              <RxCross1 onClick={handleMenuState} className="text-[#f0ede8]" />
+              <RxCross1 onClick={handleMenuState} className="text-[#7f42ce]" />
             )}
           </div>
         </div>
@@ -106,7 +109,7 @@ const hero = document.querySelector("#home"); // HeroSection must have id="hero"
         <div className="hidden navLinks flex flex-col md:flex-row justify-center items-center gap-10 md:gap-0 text-xl md:text-base md:flex md:space-x-4 text-center capitalize space-y-3 md:space-y-0 py-10 md:py-0 translate-y-[25%] md:translate-y-0">
           <a
             href="#home"
-            className="navLink text-[#f0ede8] hover:underline underline-offset-4 decoration-[#ef9c33] decoration-2 font-thin transition-all duration-300 active"
+            className="navLink text-[#7f42ce] hover:underline underline-offset-4 decoration-[#ef9c33] decoration-2 font-thin transition-all duration-300 active"
             onClick={handleActive}
           >
             Home
@@ -114,7 +117,7 @@ const hero = document.querySelector("#home"); // HeroSection must have id="hero"
 
           <a
             href="#about"
-            className="navLink text-[#f0ede8] hover:underline underline-offset-4 decoration-[#ef9c33] decoration-2 font-thin transition-all duration-300"
+            className="navLink text-[#7f42ce] hover:underline underline-offset-4 decoration-[#ef9c33] decoration-2 font-thin transition-all duration-300"
             onClick={handleActive}
           >
             About Us
@@ -122,7 +125,7 @@ const hero = document.querySelector("#home"); // HeroSection must have id="hero"
           
           <a
             href="#services"
-            className="navLink text-[#f0ede8] hover:underline underline-offset-4 decoration-[#ef9c33] decoration-2 font-thin transition-all duration-300"
+            className="navLink text-[#7f42ce] hover:underline underline-offset-4 decoration-[#ef9c33] decoration-2 font-thin transition-all duration-300"
             onClick={handleActive}
           >
             Services
@@ -130,7 +133,7 @@ const hero = document.querySelector("#home"); // HeroSection must have id="hero"
           
           <a
             href="#contacts"
-            className="navLink text-[#f0ede8] hover:underline underline-offset-4 decoration-[#ef9c33] decoration-2 font-thin transition-all duration-300"
+            className="navLink text-[#7f42ce] hover:underline underline-offset-4 decoration-[#ef9c33] decoration-2 font-thin transition-all duration-300"
             onClick={handleActive}
           >
             Contact Us
