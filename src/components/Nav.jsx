@@ -138,13 +138,6 @@ const hero = document.querySelector("#home"); // HeroSection must have id="hero"
           >
             Contact Us
           </a>
-          {/* <a
-            href="mailto:info@parwendo.co.za?subject=Online Booking: Chauffeur Services"
-            className="navLink hover:text-[#143429] text-[#f0ede8] text-sm font-semibold bg-[#ef9c33] rounded-full px-4 py-2"
-            onClick={handleMenuState}
-          >
-            Book Online
-          </a> */}
         </div>
       </nav>
     </>

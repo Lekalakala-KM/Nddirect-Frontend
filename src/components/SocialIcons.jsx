@@ -25,7 +25,7 @@ const SocialIcons = () => {
           <FaInstagram />
         </a>
         <a
-          href="https://www.facebook.com/"
+          href="https://www.facebook.com/p/ND-Direct-Marketing-100064059521292/"
           target="_blank"
           className="facebook text-2xl hover:text-[#f0ede8] text-[#ef9c33] hover:text-xl transition-all duration-300"
         >
